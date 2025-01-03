@@ -635,7 +635,7 @@
           <div class="zip-code-section" style="margin-bottom: 20px; max-width: 300px;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <input type="text" id="zipCode" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
-              <a href="https://crawford.fly.dev" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">Find My Perfect Car</a>
+              <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">Find My Perfect Car</a>
             </div>
           </div>
         </div>
@@ -716,7 +716,7 @@
       const zipCode = zipCodeInput.value;
       if (isValidZipCode(zipCode)) {
         e.preventDefault();
-        const baseUrl = 'https://crawford.fly.dev';
+        const baseUrl = 'https://app.findmynextcar.co';
         window.location.href = `${baseUrl}?zip=${zipCode}`;
         gtag('event', 'click', {
           'event_category': 'Button',
