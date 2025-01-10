@@ -455,7 +455,7 @@
     /* Add mobile-specific styles */
     @media (max-width: 768px) {
       .blue-steele-section {
-        padding: 1rem 0.5rem; /* Significantly reduced padding */
+        padding: 24px;
       }
       
       .blue-steele-blockquote {
@@ -467,6 +467,42 @@
         font-size: 0.95rem;
         line-height: 1.5;
         margin-bottom: 0.75rem;
+      }
+    }
+
+    /* Update hero section spacing and logo size for mobile */
+    @media (max-width: 768px) {
+      .blue-steele-hero {
+        padding: 2rem 1rem; /* Reduced from 4rem 2rem */
+      }
+
+      .blue-steele-hero-text img {
+        height: 45px; /* Reduced from 60px */
+        margin-bottom: 1.5rem; /* Reduced from 2rem */
+      }
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .blue-steele-section {
+        padding: 40px 24px;
+      }
+      .blue-steele-section h2 {
+        padding: 0 20px;
+        margin-bottom: 16px;
+      }
+      .blue-steele-section p {
+        padding: 0 20px;
+      }
+      .zip-code-section {
+        padding: 0 20px;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        max-width: none !important;
+      }
+      .zip-code-section input[type="text"],
+      .zip-code-section button {
+        width: 100%;
       }
     }
 
@@ -669,6 +705,19 @@
       .features-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        padding: 0 1.5rem;
+      }
+
+      .blue-steele-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .feature-item {
+        padding: 1rem;
+      }
+
+      .zip-code-container {
+        padding: 0 1.5rem;
       }
     }
 
@@ -790,18 +839,6 @@
         font-size: 0.95rem;
         line-height: 1.5;
         margin-bottom: 0.75rem;
-      }
-    }
-
-    /* Update hero section spacing and logo size for mobile */
-    @media (max-width: 768px) {
-      .blue-steele-hero {
-        padding: 2rem 1rem; /* Reduced from 4rem 2rem */
-      }
-
-      .blue-steele-hero-text img {
-        height: 45px; /* Reduced from 60px */
-        margin-bottom: 1.5rem; /* Reduced from 2rem */
       }
     }
 
@@ -1024,8 +1061,7 @@
       font-size: 1.25rem;
       color: #555;
       max-width: 600px;
-      margin: 0 auto 4rem;
-      text-align: center;
+      margin: 0 auto;
     }
 
     .step-item {
@@ -1286,7 +1322,9 @@
       .steps-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        padding: 0 1rem;
+        padding: 0 24px;
+        margin: 0 -24px;
+        width: calc(100% + 48px);
       }
     }
   </style>
@@ -1320,8 +1358,8 @@
                 <i class="far fa-hourglass fa-2x"></i>
               </div>
               <div class="feature-text">
-                <h2>Save Time & Effort</h2>
-                <p>Our smart assessment narrows down your options to 2-3 perfect matches worth test driving</p>
+                <h2 style="font-size: 20px;">Save Time & Effort</h2>
+                <p style="font-size: 16px;">Our smart assessment narrows down your options to 2-3 perfect matches worth test driving</p>
               </div>
             </div>
 
@@ -1330,8 +1368,8 @@
                 <i class="far fa-compass fa-2x"></i>
               </div>
               <div class="feature-text">
-                <h2>Don't Overlook Great Options</h2>
-                <p>80% of our users find great cars they hadn't considered before</p>
+                <h2 style="font-size: 20px;">Don't Overlook Great Options</h2>
+                <p style="font-size: 16px;">80% of our users find great cars they hadn't considered before</p>
               </div>
             </div>
 
@@ -1340,8 +1378,8 @@
                 <i class="far fa-star fa-2x"></i>
               </div>
               <div class="feature-text">
-                <h2>Tailored to You</h2>
-                <p>We consider your unique needs, preferences, and lifestyle to make personalized recommendations</p>
+                <h2 style="font-size: 20px;">Tailored to You</h2>
+                <p style="font-size: 16px;">We consider your unique needs, preferences, and lifestyle to make personalized recommendations</p>
               </div>
             </div>
           </div>
@@ -1349,7 +1387,7 @@
           <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <input type="text" id="zipCode" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
-              <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">Find My Perfect Car</a>
+              <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">FIND MY NEXT CAR</a>
             </div>
           </div>
         </div>
@@ -1365,7 +1403,7 @@
         <section class="hero">
           <div class="hero-content">
             <h1>Our Four Step Process</h1>
-            <p class="hero-subtitle">To make this easier, we do things a little differently</p>
+            <p class="hero-subtitle" style="margin-bottom: 60px;">To make this easier, we do things a little differently</p>
             
             <div class="steps-grid">
               <div class="step-card">
@@ -1407,16 +1445,17 @@
   </div> <!-- end of container -->
 
   <!-- Second Zip Code Section -->
-  <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0;">
+  <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0; padding: 80px 0;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <h2>Ready to Find Your Perfect Car?</h2>
       <p>Enter your zip code below and let's get started on your car buying journey.</p>
-      <div class="zip-code-container" style="margin: 2rem auto;">
-        <input type="text" id="zipCodeInput2" placeholder="Enter ZIP Code" maxlength="5" 
-               style="padding: 0.75rem; font-size: 1rem; border: 2px solid #4361ee; border-radius: 4px; margin-right: 1rem;">
-        <button id="findCarButton2" class="blue-steele-button disabled">
-          Find My Next Car
-        </button>
+      <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <input type="text" id="zipCodeInput2" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" 
+                 style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
+          <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton2" 
+             style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">FIND MY NEXT CAR</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1475,19 +1514,23 @@
 
     // Add validation for second zip code input
     zipCodeInput2.addEventListener('input', function(e) {
+      // Remove any non-numeric characters
       this.value = this.value.replace(/[^0-9]/g, '');
       
+      // Update button state based on zip code validity
       if (isValidZipCode(this.value)) {
         findCarButton2.classList.remove('disabled');
+        findCarButton2.href = `https://app.findmynextcar.co?zip=${this.value}`;
       } else {
         findCarButton2.classList.add('disabled');
+        findCarButton2.href = 'https://app.findmynextcar.co';
       }
     });
 
     // Add click handler for second button
-    findCarButton2.addEventListener('click', function() {
-      if (!this.classList.contains('disabled')) {
-        window.location.href = `https://app.findmynextcar.co/?zip=${zipCodeInput2.value}`;
+    findCarButton2.addEventListener('click', function(e) {
+      if (this.classList.contains('disabled')) {
+        e.preventDefault();
       }
     });
   </script>
