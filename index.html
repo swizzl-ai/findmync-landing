@@ -12,7 +12,7 @@
   <meta property="og:title" content="Find My Next Car">
   <meta property="og:description" content="Your personalized car buying assistant. Get expert guidance and find the perfect car that matches your needs, preferences, and budget.">
   <meta property="og:image" content="mainimg/opengraph.png">
-  <meta property="og:url" content="https://findmync.com">
+  <meta property="og:url" content="https://findmynextcar.co">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card Tags (Optional but recommended) -->
@@ -57,15 +57,8 @@
       position: relative;
       min-height: 100vh;
       margin: 0;
-      padding-bottom: 200px;
-    }
-
-    /* Container */
-    .container {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Blue Steele Styles */
@@ -73,6 +66,8 @@
       text-align: center;
       padding: 2rem 1rem;
       background-color: #f8f8f8;
+      max-width: 872px;
+      margin: 0 auto;
     }
 
     .blue-steele-hero-image {
@@ -226,15 +221,14 @@
 
     .blue-steele-footer {
       text-align: center;
-      padding: 4rem 2rem;
-      background: #1a0033;
+      padding: 2rem;
+      background-color: #1a0033;
       color: #fff;
-      width: 100%;
-      min-height: 200px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      margin-top: 0;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .blue-steele-hero {
@@ -331,23 +325,13 @@
 
     /* Add these styles in the <style> section */
     .sticky-header {
-      position: fixed;
+      text-align: center;
+      padding: 1rem;
+      background-color: #fff;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       z-index: 1000;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease;
-    }
-
-    .sticky-header.visible {
-      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .sticky-header img {
@@ -468,64 +452,360 @@
       }
     }
 
-    /* Add this to your CSS styles section */
-    .social-links {
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      color: #0077b5; /* LinkedIn blue */
-      font-size: 1.5rem;
-      transition: opacity 0.3s ease;
-    }
-
-    .social-links a:hover {
-      opacity: 0.8;
-    }
-
-    .book-section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .book-section h2 {
-      margin-bottom: 2rem;
-      color: #333;
-    }
-
-    .book-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .book-container img {
-      height: 300px;
-      width: auto;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-container img:hover {
-      transform: translateY(-5px);
-    }
-
+    /* Add mobile-specific styles */
     @media (max-width: 768px) {
-      .book-container img {
-        height: 250px;
+      .blue-steele-section {
+        padding: 1rem 0.5rem; /* Significantly reduced padding */
+      }
+      
+      .blue-steele-blockquote {
+        padding: 0.5rem 0;
+        border-left: none;
+      }
+      
+      .blue-steele-blockquote p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
       }
     }
 
-    /* Add this to your CSS */
-    html {
-      scroll-behavior: smooth;
+    /* Features Section Styles */
+    .features {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    #book-demo {
-      scroll-margin-top: 100px; /* Adjusts for the sticky header */
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+      gap: 2rem;
     }
 
+    .feature-icon {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2563eb;
+    }
+
+    .feature-text {
+      flex-grow: 1;
+    }
+
+    .feature-text h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .feature-text p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+      text-align: center;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step-item:hover {
+      transform: translateX(10px);
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                 linear-gradient(135deg, #4361ee, #7209b7) border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .step-number::before {
+      content: attr(data-number);
+      background: linear-gradient(135deg, #4361ee, #7209b7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .step-content {
+      flex-grow: 1;
+      padding-top: 0.75rem;
+    }
+
+    .step-content h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .step-number {
+        margin-top: 0;
+      }
+
+      .step-item:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Features Grid Styles */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .features-grid .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    .features-grid .feature-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #4F46E5, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .features-grid .feature-text h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #4b5563;
+    }
+
+    .features-grid .feature-text p {
+      font-size: 0.875rem;
+      color: #6b7280;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    /* Process Steps Styles */
+    .process-steps {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step-item:hover {
+      transform: translateX(10px);
+    }
+
+    .process-step-number {
+      flex-shrink: 0;
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                 linear-gradient(135deg, #4361ee, #7209b7) border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .process-step-number::before {
+      content: attr(data-number);
+      background: linear-gradient(135deg, #4361ee, #7209b7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1;
+      position: absolute;
+    }
+
+    .step-content {
+      flex-grow: 1;
+    }
+
+    .step-content h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .step-number {
+        margin-top: 0;
+      }
+
+      .step-item:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Add mobile-specific styles */
+    @media (max-width: 768px) {
+      .blue-steele-section {
+        padding: 1rem 0.5rem; /* Significantly reduced padding */
+      }
+      
+      .blue-steele-blockquote {
+        padding: 0.5rem 0;
+        border-left: none;
+      }
+      
+      .blue-steele-blockquote p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    /* Update hero section spacing and logo size for mobile */
+    @media (max-width: 768px) {
+      .blue-steele-hero {
+        padding: 2rem 1rem; /* Reduced from 4rem 2rem */
+      }
+
+      .blue-steele-hero-text img {
+        height: 45px; /* Reduced from 60px */
+        margin-bottom: 1.5rem; /* Reduced from 2rem */
+      }
+    }
+
+    /* Testimonials Grid Styles */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -578,33 +858,435 @@
       }
     }
 
-    /* Update hero section spacing and logo size for mobile */
-    @media (max-width: 768px) {
-      .blue-steele-hero {
-        padding: 2rem 1rem; /* Reduced from 4rem 2rem */
-      }
+    /* Social Links Styles */
+    .social-links {
+      margin-top: 1rem;
+    }
 
-      .blue-steele-hero-text img {
-        height: 45px; /* Reduced from 60px */
-        margin-bottom: 1.5rem; /* Reduced from 2rem */
+    .social-links a {
+      color: #0077b5; /* LinkedIn blue */
+      font-size: 1.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-links a:hover {
+      opacity: 0.8;
+    }
+
+    /* Book Section Styles */
+    .book-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .book-section h2 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .book-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .book-container img {
+      height: 300px;
+      width: auto;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-container img:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .book-container img {
+        height: 250px;
       }
     }
 
-    /* Add mobile-specific styles */
+    /* Add this to your CSS */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #book-demo {
+      scroll-margin-top: 100px; /* Adjusts for the sticky header */
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+      text-align: center;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 1rem;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #4361ee;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .step-content {
+      flex-grow: 1;
+      padding-top: 0.75rem;
+    }
+
+    .step-content h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
     @media (max-width: 768px) {
-      .blue-steele-section {
-        padding: 1rem 0.5rem; /* Significantly reduced padding */
+      .hero {
+        padding: 3rem 1rem;
       }
-      
-      .blue-steele-blockquote {
-        padding: 0.5rem 0;
-        border-left: none;
+
+      .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
       }
-      
-      .blue-steele-blockquote p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 0.75rem;
+
+      .step-content {
+        padding-top: 0;
+      }
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+      text-align: center;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .step-icon {
+      background: linear-gradient(135deg, #4361ee, #7209b7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin: 0 auto;
+    }
+
+    .step-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .step-header h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .step-item p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .step-top {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .step-icon {
+        margin: 0 auto;
+      }
+
+      .step-header {
+        text-align: center;
+      }
+
+      .step-item p {
+        text-align: center;
+      }
+    }
+
+    .step-item {
+      margin-bottom: 2.5rem;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-header h3 {
+      color: #222;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .step-item p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-left: calc(36px + 1rem);
+    }
+
+    @media (max-width: 768px) {
+      .step-header {
+        justify-content: center;
+      }
+
+      .step-item p {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+
+    .step-item {
+      margin-bottom: 2.5rem;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-top {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-icon {
+      color: #4361ee;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-top h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .step-item p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+      margin-left: calc(80px + 2rem);
+    }
+
+    @media (max-width: 768px) {
+      .step-top {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .step-icon {
+        margin: 0 auto;
+      }
+
+      .step-top h3 {
+        text-align: center;
+      }
+
+      .step-item p {
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .step-icon {
+      color: #4361ee;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin: 0 auto;
+    }
+
+    .step-card h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step-icon {
+      color: #4361ee;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-card h3 {
+      color: #222;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+
+    .step-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
       }
     }
   </style>
@@ -613,7 +1295,7 @@
 
   <!-- This should be the very first element after <body> -->
   <header class="sticky-header">
-    <img src="mainimg/headerlogo.png" alt="Swizzl Logo">
+    <img src="mainimg/logo.png" alt="Swizzl Logo">
   </header>
 
   <!-- Wave Background -->
@@ -623,16 +1305,48 @@
   </div>
 
   <!-- Blue Steele Content -->
-  <div class="container">
+  <div>
 
     <!-- Hero Section -->
     <section class="blue-steele-hero">  
-      <div class="blue-steele-hero-content">
+      <div class="blue-steele-hero-content" style="max-width: 872px; margin: 0 auto;">
         <div class="blue-steele-hero-text">
-          <img src="mainimg/logo.png" alt="Swizzl Logo">
-          <h1>Find the Car That Truly Matches Your Needs</h1>
-          <p>50% of people don't buy the car they planned, but no one wants to be sold either. Together, we'll help you get the car you want, while keeping you in control.</p>
-          <div class="zip-code-section" style="margin-bottom: 20px; max-width: 300px;">
+          <h1>Car Shopping With Confidence</h1>
+          <!-- <p>40% of Americans have regretted a car purchase. Our goal is to help you consider all the best options and make a right decision faster.</p>
+           -->
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="far fa-hourglass fa-2x"></i>
+              </div>
+              <div class="feature-text">
+                <h2>Save Time & Effort</h2>
+                <p>Our smart assessment narrows down your options to 2-3 perfect matches worth test driving</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="far fa-compass fa-2x"></i>
+              </div>
+              <div class="feature-text">
+                <h2>Don't Overlook Great Options</h2>
+                <p>80% of our users find great cars they hadn't considered before</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="far fa-star fa-2x"></i>
+              </div>
+              <div class="feature-text">
+                <h2>Tailored to You</h2>
+                <p>We consider your unique needs, preferences, and lifestyle to make personalized recommendations</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
               <input type="text" id="zipCode" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
               <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">Find My Perfect Car</a>
@@ -640,50 +1354,76 @@
           </div>
         </div>
         <div class="blue-steele-hero-image">
-          <img src="mainimg/consultant.png" alt="Sales Consultant Illustration">
+          <img src="mainimg/purchase4.png" alt="Sales Consultant Illustration">
         </div>
       </div>
     </section>
 
     <!-- Main Content -->
     <main class="blue-steele-main">
-      <!-- Testimonials -->
-      <section class="blue-steele-testimonial" style="display: none;">
-        <h2>Testimonials</h2>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <img src="mainimg/dane.jpg" alt="Dane - Car Buyer">
-            <div class="testimonial-content">
-              <p class="testimonial-name">Dane</p>
-              <p class="testimonial-title">First-time Car Buyer</p>
-              <p class="testimonial-text">"I was dreading the whole car buying process, but Swizzl made it surprisingly easy. Instead of spending weekends at dealerships, I found exactly what I wanted in 20 minutes. No pressure, no hassle."</p>
+      <div style="max-width: 872px; margin: 0 auto;">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Our Four Step Process</h1>
+            <p class="hero-subtitle">To make this easier, we do things a little differently</p>
+            
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-icon">
+                  <i class="fas fa-user-friends fa-3x"></i>
+                </div>
+                <h3>Your Story</h3>
+                <p>We learn about YOU. Together, we'll get clear on how this car fits your life</p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-icon">
+                  <i class="fas fa-list-check fa-3x"></i>
+                </div>
+                <h3>Preferences</h3>
+                <p>Your body type and must-have features that make a car right for you</p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-icon">
+                  <i class="fas fa-scale-balanced fa-3x"></i>
+                </div>
+                <h3>Your Tradeoffs</h3>
+                <p>No car is perfect for anyone. Discover what gaps you're willing to live with</p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-icon">
+                  <i class="fas fa-check-circle fa-3x"></i>
+                </div>
+                <h3>The Decision</h3>
+                <p>With a few good options, we'll help you understand the key decisions needed for your final choice</p>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <img src="mainimg/kyle.jpg" alt="Kyle - Car Buyer">
-            <div class="testimonial-content">
-              <p class="testimonial-name">Kyle</p>
-              <p class="testimonial-title">Recent Car Buyer</p>
-              <p class="testimonial-text">"Last time I bought a car, I felt completely overwhelmed. This time with Swizzl, I walked into the dealership knowing exactly what I wanted and what I should pay. Total game-changer!"</p>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <img src="mainimg/kyle.jpg" alt="Michael - Car Buyer">
-            <div class="testimonial-content">
-              <p class="testimonial-name">Michael</p>
-              <p class="testimonial-title">Family Car Buyer</p>
-              <p class="testimonial-text">"With three kids, I didn't have time to visit multiple dealerships. Swizzl helped me narrow down my options in minutes, and I found the perfect family SUV without the usual stress."</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   </div> <!-- end of container -->
 
-  <footer class="blue-steele-footer">
-    <p>&copy; 2024 Swizzl. All rights reserved.</p>
-  </footer>
+  <!-- Second Zip Code Section -->
+  <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2>Ready to Find Your Perfect Car?</h2>
+      <p>Enter your zip code below and let's get started on your car buying journey.</p>
+      <div class="zip-code-container" style="margin: 2rem auto;">
+        <input type="text" id="zipCodeInput2" placeholder="Enter ZIP Code" maxlength="5" 
+               style="padding: 0.75rem; font-size: 1rem; border: 2px solid #4361ee; border-radius: 4px; margin-right: 1rem;">
+        <button id="findCarButton2" class="blue-steele-button disabled">
+          Find My Next Car
+        </button>
+      </div>
+    </div>
+  </section>
 
+  <footer class="blue-steele-footer">
+    <p>&copy; 2025 Find My Next Car. All rights reserved.</p>
+  </footer>
 
   <script>
     const zipCodeInput = document.getElementById('zipCode');
@@ -728,6 +1468,28 @@
 
     // Initialize button state
     updateButtonState();
+
+    // Get the second zip code input and button
+    const zipCodeInput2 = document.getElementById('zipCodeInput2');
+    const findCarButton2 = document.getElementById('findCarButton2');
+
+    // Add validation for second zip code input
+    zipCodeInput2.addEventListener('input', function(e) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+      
+      if (isValidZipCode(this.value)) {
+        findCarButton2.classList.remove('disabled');
+      } else {
+        findCarButton2.classList.add('disabled');
+      }
+    });
+
+    // Add click handler for second button
+    findCarButton2.addEventListener('click', function() {
+      if (!this.classList.contains('disabled')) {
+        window.location.href = `https://app.findmynextcar.co/?zip=${zipCodeInput2.value}`;
+      }
+    });
   </script>
 </body>
 </html>
