@@ -79,12 +79,15 @@
     .blue-steele-header h1 {
       font-size: 2.5rem;
       color: #222;
+      margin-bottom: 1rem;
     }
 
     .blue-steele-header p {
+      font-size: 1.8rem;
       max-width: 600px;
       margin: 1rem auto;
       color: #555;
+      line-height: 1.4;
     }
 
     .blue-steele-button {
@@ -127,9 +130,10 @@
     }
 
     .blue-steele-section h2 {
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
+      font-size: 1.5rem;  /* Reduced from 1.75rem */
+      margin-bottom: 1.5rem;
       text-align: center;
+      color: #444;
     }
 
     .blue-steele-blockquote {
@@ -485,7 +489,7 @@
     /* Mobile Styles */
     @media (max-width: 768px) {
       .blue-steele-section {
-        padding: 40px 24px;
+        padding: 2rem 1.5rem;
       }
       .blue-steele-section h2 {
         padding: 0 20px;
@@ -565,7 +569,7 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #555;
       max-width: 600px;
       margin: 0 auto 3rem;
@@ -688,14 +692,14 @@
     }
 
     .features-grid .feature-text h2 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
       color: #4b5563;
     }
 
     .features-grid .feature-text p {
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       color: #6b7280;
       line-height: 1.4;
       margin: 0;
@@ -801,7 +805,7 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #555;
       max-width: 600px;
       margin: 0 auto;
@@ -856,7 +860,7 @@
       background: white;
       border-radius: 12px;
       padding: 2rem;
-      text-align: center;
+      text-align: left;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
@@ -865,15 +869,15 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 1.5rem;
-      border: 3px solid #4361ee;
+      margin-bottom: 20px;
+      align-self: center;
     }
 
     .testimonial-name {
       font-size: 1.25rem;
       font-weight: bold;
       color: #222;
-      margin-bottom: 0.25rem;
+      margin-bottom: 8px;
     }
 
     .testimonial-title {
@@ -971,7 +975,7 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #555;
       max-width: 600px;
       margin: 0 auto 3rem;
@@ -1058,7 +1062,7 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: #555;
       max-width: 600px;
       margin: 0 auto;
@@ -1327,6 +1331,151 @@
         width: calc(100% + 48px);
       }
     }
+
+    .help-section {
+      padding: 80px 20px;
+      background: transparent;
+      text-align: center;
+    }
+
+    .help-section h2 {
+      margin-bottom: 50px;
+      color: #333;
+      font-size: 3em;
+    }
+
+    .help-section-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 872px;
+      margin: 0 auto;
+    }
+
+    .help-section-card {
+      background: #f8f9fa;
+      border-radius: 5px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      text-align: left;
+      width: 100%;
+      max-width: none;
+    }
+
+    /* Help Section Styles */
+    .help-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .help-section h2 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .help-section-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .help-section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    .help-section-card p {
+      font-size: 24px;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Features Grid Styles */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .feature-icon {
+      color: #4E2F9A;
+      flex-shrink: 0;
+    }
+
+    .feature-text h2 {
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    .feature-text p {
+      margin: 0;
+      color: #666;
+    }
+
+    /* Help Section Styles */
+    .help-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .help-section h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .help-section-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .help-section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    .help-section-card p {
+      font-size: 24px;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <style>
+    .features-grid {
+      display: block;
+    }
+    .feature-item {
+      width: 100%;
+      margin-bottom: 20px; /* Optional: Adds space between each block */
+    }
   </style>
 </head>
 <body>
@@ -1349,40 +1498,9 @@
     <section class="blue-steele-hero">  
       <div class="blue-steele-hero-content" style="max-width: 872px; margin: 0 auto;">
         <div class="blue-steele-hero-text">
-          <h1>Car Shopping With Confidence</h1>
-          <!-- <p>40% of Americans have regretted a car purchase. Our goal is to help you consider all the best options and make a right decision faster.</p>
-           -->
-          <div class="features-grid">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="far fa-hourglass fa-2x"></i>
-              </div>
-              <div class="feature-text">
-                <h2 style="font-size: 20px;">Save Time & Effort</h2>
-                <p style="font-size: 16px;">Our smart assessment narrows down your options to 2-3 perfect matches worth test driving</p>
-              </div>
-            </div>
+          <h1>40% of Americans Have Regretted a Car Purchase.</h1>
+          <p style="font-size: 24px; line-height: 1.4; margin-bottom: 2rem;">Other sites give you lists of cars. We help you actually figure this out. We can do it together.</p>
 
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="far fa-compass fa-2x"></i>
-              </div>
-              <div class="feature-text">
-                <h2 style="font-size: 20px;">Don't Overlook Great Options</h2>
-                <p style="font-size: 16px;">80% of our users find great cars they hadn't considered before</p>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="feature-icon">
-                <i class="far fa-star fa-2x"></i>
-              </div>
-              <div class="feature-text">
-                <h2 style="font-size: 20px;">Tailored to You</h2>
-                <p style="font-size: 16px;">We consider your unique needs, preferences, and lifestyle to make personalized recommendations</p>
-              </div>
-            </div>
-          </div>
 
           <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -1397,12 +1515,37 @@
       </div>
     </section>
 
+    <!-- Help Section -->
+    <section class="help-section" id="helpSection">
+      <h2>We can help when...</h2>
+      <div class="help-section-cards" style="max-width: 872px; margin: 0 auto;">
+        <div class="help-section-card">
+          <p>You can't decide</p>
+        </div>
+        <div class="help-section-card">
+          <p>You've already looked at a ton of cars and you're stressed</p>
+        </div>
+        <div class="help-section-card">
+          <p>You can't trust the salesperson</p>
+        </div>
+        <div class="help-section-card">
+          <p>You can't figure out what car is YOU</p>
+        </div>
+        <div class="help-section-card">
+          <p>You're worried about getting ripped off</p>
+        </div>
+        <div class="help-section-card">
+          <p>You don't know where to start</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Main Content -->
     <main class="blue-steele-main">
       <div style="max-width: 872px; margin: 0 auto;">
         <section class="hero">
           <div class="hero-content">
-            <h1>Our Four Step Process</h1>
+            <h1 class="process-header">Our Four Step Process</h1>
             <p class="hero-subtitle" style="margin-bottom: 60px;">To make this easier, we do things a little differently</p>
             
             <div class="steps-grid">
@@ -1443,6 +1586,44 @@
       </div>
     </main>
   </div> <!-- end of container -->
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" style="padding: 80px 0;">
+    <div style="max-width: 872px; margin: 0 auto;">
+      <h1 class="process-header" style="text-align: center; margin-bottom: 60px;">What Our Customers Say</h1>
+      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Sara's Testimonial -->
+        <div class="testimonial-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+          <img src="mainimg/sara.jpg" alt="Sara" style="width: 120px; height: 120px; border-radius: 60px; object-fit: cover; margin-bottom: 20px; align-self: center;">
+          <p style="font-style: italic; color: #333; margin-bottom: 20px; line-height: 1.6;">"I was drowning in car listings and conflicting advice. Nothing seemed to click. Then this tool helped me nail exactly what I needed - a hybrid SUV that screams 'professional' without breaking the bank. Now I'm driving something that feels like it was built just for me."</p>
+          <div class="testimonial-author" style="font-weight: 600; color: #4E2F9A;">
+            <div style="font-size: 18px; margin-bottom: 8px;">Sara</div>
+            <div style="font-size: 14px; opacity: 0.8;">Marketing Director</div>
+          </div>
+        </div>
+
+        <!-- Mike's Testimonial -->
+        <div class="testimonial-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+          <img src="mainimg/mike.jpg" alt="Mike" style="width: 120px; height: 120px; border-radius: 60px; object-fit: cover; margin-bottom: 20px; align-self: center;">
+          <p style="font-style: italic; color: #333; margin-bottom: 20px; line-height: 1.6;">"Car shopping used to be my nightmare. Pushy salesmen, endless debates with buddies about what truck works best. This service cut through all that noise. I ended up with a pickup that handles my job sites and weekend mountain trips like a champ. Game changer."</p>
+          <div class="testimonial-author" style="font-weight: 600; color: #4E2F9A;">
+            <div style="font-size: 18px; margin-bottom: 8px;">Mike</div>
+            <div style="font-size: 14px; opacity: 0.8;">Construction Supervisor</div>
+          </div>
+        </div>
+
+        <!-- Elena's Testimonial -->
+        <div class="testimonial-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+          <img src="mainimg/elena.jpg" alt="Elena" style="width: 120px; height: 120px; border-radius: 60px; object-fit: cover; margin-bottom: 20px; align-self: center;">
+          <p style="font-style: italic; color: #333; margin-bottom: 20px; line-height: 1.6;">"Finding a car that works for school drop-offs, road trips, and keeping my kids safe? Impossible, I thought. This process showed me a minivan I never would've considered - now it's like our family's command center on wheels. Who knew car shopping could actually be stress-free?"</p>
+          <div class="testimonial-author" style="font-weight: 600; color: #4E2F9A;">
+            <div style="font-size: 18px; margin-bottom: 8px;">Elena</div>
+            <div style="font-size: 14px; opacity: 0.8;">Work-From-Home Mom</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Second Zip Code Section -->
   <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0; padding: 80px 0;">
@@ -1531,6 +1712,25 @@
     findCarButton2.addEventListener('click', function(e) {
       if (this.classList.contains('disabled')) {
         e.preventDefault();
+      }
+    });
+
+    // Get the third zip code input and button
+    const zipCodeInput3 = document.getElementById('zipCodeInput3');
+    const findCarButton3 = document.getElementById('findCarButton3');
+
+    // Add validation for third zip code input
+    zipCodeInput3.addEventListener('input', function(e) {
+      // Remove any non-numeric characters
+      this.value = this.value.replace(/[^0-9]/g, '');
+      
+      // Update button state based on zip code validity
+      if (isValidZipCode(this.value)) {
+        findCarButton3.classList.remove('disabled');
+        findCarButton3.href = `https://app.findmynextcar.co?zip=${this.value}`;
+      } else {
+        findCarButton3.classList.add('disabled');
+        findCarButton3.href = 'https://app.findmynextcar.co';
       }
     });
   </script>
