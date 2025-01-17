@@ -115,13 +115,15 @@
     }
 
     .blue-steele-main {
-      padding: 0 1rem;
+      width: 100%;
+      margin: 0 auto;
     }
 
     .blue-steele-section {
       margin-bottom: 2rem;
-      padding: 2rem 2rem;
+      padding: 2rem 0;
       text-align: center;
+      width: 100%;
     }
 
     /* Update the quote section background to semi-transparent black */
@@ -851,7 +853,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 872px;
       margin: 0 auto;
       padding: 1rem;
     }
@@ -1333,45 +1335,13 @@
     }
 
     .help-section {
-      padding: 80px 20px;
-      background: transparent;
-      text-align: center;
-    }
-
-    .help-section h2 {
-      margin-bottom: 50px;
-      color: #333;
-      font-size: 3em;
-    }
-
-    .help-section-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 872px;
-      margin: 0 auto;
-    }
-
-    .help-section-card {
-      background: #f8f9fa;
-      border-radius: 5px;
-      padding: 20px 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      font-size: 1.6rem;
-      font-weight: 300;
-      font-style: italic;
-      text-align: left;
-      width: 100%;
-      max-width: none;
-    }
-
-    /* Help Section Styles */
-    .help-section {
       padding: 80px 0;
       text-align: center;
     }
 
     .help-section h2 {
+      font-size: 32px;
+      font-weight: 600;
       margin-bottom: 40px;
       color: #333;
     }
@@ -1379,7 +1349,9 @@
     .help-section-cards {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 0;
+      max-width: 872px;
+      margin: 0 auto;
       padding: 0 20px;
     }
 
@@ -1388,14 +1360,94 @@
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 100%;
+      width: auto;
+      align-self: flex-start;
+      margin-top: -15px;
+      position: relative;
+      z-index: 6;
+    }
+
+    .help-section-card:nth-child(even) {
+      align-self: flex-end;
+    }
+
+    .help-section-card:nth-child(2) {
+      z-index: 5;
+    }
+
+    .help-section-card:nth-child(3) {
+      z-index: 4;
+    }
+
+    .help-section-card:nth-child(4) {
+      z-index: 3;
+    }
+
+    .help-section-card:nth-child(5) {
+      z-index: 2;
+    }
+
+    .help-section-card:nth-child(6) {
+      z-index: 1;
+    }
+
+    .help-section-card:hover {
+      z-index: 7;
     }
 
     .help-section-card p {
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 1.5;
       color: #333;
       margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .help-section:not(.help-section-mobile) {
+        display: none;
+      }
+      
+      .help-section-mobile {
+        display: block;
+      }
+    }
+
+    @media (min-width: 601px) {
+      .help-section-mobile {
+        display: none;
+      }
+    }
+
+    /* Help Section Cards */
+    .help-section-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .help-section-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .help-section-card p {
+      font-size: 1.5rem !important;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .help-section-card p {
+        font-size: 1rem !important;
+      }
+      .help-section-cards {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Features Grid Styles */
@@ -1442,8 +1494,10 @@
 
     .help-section-cards {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 20px;
+      max-width: 872px;
+      margin: 0 auto;
       padding: 0 20px;
     }
 
@@ -1452,29 +1506,138 @@
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 100%;
+      width: auto;
+      flex: 1;
     }
 
     .help-section-card p {
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 1.5;
       color: #333;
       margin: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .features-grid {
         grid-template-columns: 1fr;
       }
     }
-  </style>
-  <style>
-    .features-grid {
+
+    /* Desktop Help Section */
+    .help-section-desktop {
       display: block;
     }
-    .feature-item {
-      width: 100%;
-      margin-bottom: 20px; /* Optional: Adds space between each block */
+    
+    .help-section-desktop .help-section-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 872px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .help-section-desktop .help-section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: auto;
+      align-self: flex-start;
+      margin-top: -15px;
+      position: relative;
+      z-index: 6;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(even) {
+      align-self: flex-end;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(2) {
+      z-index: 5;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(3) {
+      z-index: 4;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(4) {
+      z-index: 3;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(5) {
+      z-index: 2;
+    }
+
+    .help-section-desktop .help-section-card:nth-child(6) {
+      z-index: 1;
+    }
+
+    .help-section-desktop .help-section-card:hover {
+      z-index: 7;
+    }
+
+    .help-section-desktop .help-section-card p {
+      font-size: 1.5rem !important;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Mobile Help Section */
+    .help-section-mobile {
+      display: none;
+    }
+
+    .help-section-mobile .help-section-cards {
+      padding: 0 20px;
+    }
+
+    .help-section-mobile .help-section-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+
+    .help-section-mobile .help-section-card p {
+      font-size: 1.2rem !important;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+    }
+
+    .help-section-mobile .help-section-card:nth-child(odd) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+    .help-section-mobile .help-section-card:nth-child(even) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    @media (max-width: 600px) {
+      .help-section-desktop {
+        display: none;
+      }
+      .help-section-mobile {
+        display: block;
+      }
+    }
+  </style>
+  <style>
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
     }
   </style>
 </head>
@@ -1510,15 +1673,15 @@
           </div>
         </div>
         <div class="blue-steele-hero-image">
-          <img src="mainimg/purchase4.png" alt="Sales Consultant Illustration">
+          <img src="mainimg/consultant.png" alt="Sales Consultant Illustration">
         </div>
       </div>
     </section>
 
-    <!-- Help Section -->
-    <section class="help-section" id="helpSection">
-      <h2>We can help when...</h2>
-      <div class="help-section-cards" style="max-width: 872px; margin: 0 auto;">
+    <!-- Help Section Desktop -->
+    <section class="help-section help-section-desktop" id="helpSection">
+      <h2 style="color: #222; font-size: 2rem; text-align: center; margin-bottom: 6rem;">We can help when...</h2>
+      <div class="help-section-cards">
         <div class="help-section-card">
           <p>You can't decide</p>
         </div>
@@ -1540,45 +1703,87 @@
       </div>
     </section>
 
+    <!-- Help Section Mobile -->
+    <section class="help-section help-section-mobile">
+      <h2 style="color: #222; font-size: 2rem; text-align: center; margin-bottom: 6rem;">We can help when...</h2>
+      <div class="help-section-cards">
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You can't decide</p>
+        </div>
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You've already looked at a ton of cars and you're stressed</p>
+        </div>
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You can't trust the salesperson</p>
+        </div>
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You can't figure out what car is YOU</p>
+        </div>
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You're worried about getting ripped off</p>
+        </div>
+        <div class="help-section-card">
+          <p style="font-size: 1.2rem;">You don't know where to start</p>
+        </div>
+      </div>
+    </section>
+
+       <!-- Save Hours Section -->
+   <section class="blue-steele-section" style="margin-bottom: 0; padding: 80px 0; background: none;">
+    <div style="max-width: 872px; margin: 0 auto; padding: 0 20px;">
+      <div style="background: rgba(78, 47, 154, 0.1); padding: 40px; border-radius: 16px; max-width: 872px; margin: 0 auto;">
+        <h2>Save 10+ Hours of Research</h2>
+        <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <input type="text" id="zipCodeInput2" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" 
+                   style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
+            <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton2" 
+               style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">FIND MY NEXT CAR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- Main Content -->
     <main class="blue-steele-main">
-      <div style="max-width: 872px; margin: 0 auto;">
+      <div style="max-width: 872px; margin: 0 auto; padding: 0 20px;">
         <section class="hero">
           <div class="hero-content">
-            <h1 class="process-header">Our Four Step Process</h1>
-            <p class="hero-subtitle" style="margin-bottom: 60px;">To make this easier, we do things a little differently</p>
+            <h2 style="color: #222; font-size: 2rem; text-align: center; margin-bottom: 1.5rem;">Our Four Step Process</h2>
+            <p class="hero-subtitle" style="margin-bottom: 60px; text-align: center; color: #555;">To make this easier, we do things a little differently</p>
             
-            <div class="steps-grid">
-              <div class="step-card">
-                <div class="step-icon">
+            <div class="steps-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+              <div class="step-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div class="step-icon" style="margin-bottom: 20px;">
                   <i class="fas fa-user-friends fa-3x"></i>
                 </div>
-                <h3>Your Story</h3>
-                <p>We learn about YOU. Together, we'll get clear on how this car fits your life</p>
+                <h3 style="margin-bottom: 15px; color: #222;">Your Story</h3>
+                <p style="color: #555; line-height: 1.6;">We learn about YOU. Together, we'll get clear on how this car fits your life</p>
               </div>
 
-              <div class="step-card">
-                <div class="step-icon">
+              <div class="step-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div class="step-icon" style="margin-bottom: 20px;">
                   <i class="fas fa-list-check fa-3x"></i>
                 </div>
-                <h3>Preferences</h3>
-                <p>Your body type and must-have features that make a car right for you</p>
+                <h3 style="margin-bottom: 15px; color: #222;">Preferences</h3>
+                <p style="color: #555; line-height: 1.6;">Your body type and must-have features that make a car right for you</p>
               </div>
 
-              <div class="step-card">
-                <div class="step-icon">
+              <div class="step-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div class="step-icon" style="margin-bottom: 20px;">
                   <i class="fas fa-scale-balanced fa-3x"></i>
                 </div>
-                <h3>Your Tradeoffs</h3>
-                <p>No car is perfect for anyone. Discover what gaps you're willing to live with</p>
+                <h3 style="margin-bottom: 15px; color: #222;">Your Tradeoffs</h3>
+                <p style="color: #555; line-height: 1.6;">No car is perfect for anyone. Discover what gaps you're willing to live with</p>
               </div>
 
-              <div class="step-card">
-                <div class="step-icon">
+              <div class="step-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div class="step-icon" style="margin-bottom: 20px;">
                   <i class="fas fa-check-circle fa-3x"></i>
                 </div>
-                <h3>The Decision</h3>
-                <p>With a few good options, we'll help you understand the key decisions needed for your final choice</p>
+                <h3 style="margin-bottom: 15px; color: #222;">The Decision</h3>
+                <p style="color: #555; line-height: 1.6;">With a few good options, we'll help you understand the key decisions needed for your final choice</p>
               </div>
             </div>
           </div>
@@ -1587,11 +1792,13 @@
     </main>
   </div> <!-- end of container -->
 
+
+
   <!-- Testimonials Section -->
   <section class="testimonials-section" style="padding: 80px 0;">
-    <div style="max-width: 872px; margin: 0 auto;">
-      <h1 class="process-header" style="text-align: center; margin-bottom: 60px;">What Our Customers Say</h1>
-      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+    <div style="max-width: 872px; margin: 0 auto; padding: 0 20px;">
+      <h2 style="color: #222; font-size: 2rem; text-align: center; margin-bottom: 1.5rem;">What Our Customers Say</h2>
+      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 872px; margin: 0 auto;">
         <!-- Sara's Testimonial -->
         <div class="testimonial-card" style="background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
           <img src="mainimg/sara.jpg" alt="Sara" style="width: 120px; height: 120px; border-radius: 60px; object-fit: cover; margin-bottom: 20px; align-self: center;">
@@ -1627,7 +1834,7 @@
 
   <!-- Second Zip Code Section -->
   <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0; padding: 80px 0;">
-    <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="max-width: 872px; margin: 0 auto; padding: 0 20px;">
       <h2>Ready to Find Your Perfect Car?</h2>
       <p>Enter your zip code below and let's get started on your car buying journey.</p>
       <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
@@ -1724,13 +1931,10 @@
       // Remove any non-numeric characters
       this.value = this.value.replace(/[^0-9]/g, '');
       
-      // Update button state based on zip code validity
       if (isValidZipCode(this.value)) {
         findCarButton3.classList.remove('disabled');
-        findCarButton3.href = `https://app.findmynextcar.co?zip=${this.value}`;
       } else {
         findCarButton3.classList.add('disabled');
-        findCarButton3.href = 'https://app.findmynextcar.co';
       }
     });
   </script>
