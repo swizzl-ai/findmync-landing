@@ -1662,12 +1662,12 @@
       <div class="blue-steele-hero-content" style="max-width: 872px; margin: 0 auto;">
         <div class="blue-steele-hero-text">
           <h1>40% of Americans Have Regretted a Car Purchase.</h1>
-          <p style="font-size: 24px; line-height: 1.4; margin-bottom: 2rem;">Other sites give you lists of cars. We help you actually figure this out. We can do it together.</p>
+          <p style="font-size: 24px; line-height: 1.4; margin-bottom: 2rem;">Other sites give you lists of cars. We help you figure out the right one. FREE. No bias.</p>
 
 
           <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
             <div style="display: flex; flex-direction: column; gap: 8px;">
-              <input type="text" id="zipCode" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
+              <input type="text" id="zipCode" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;" autofocus>
               <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton" style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;">FIND MY NEXT CAR</a>
             </div>
           </div>
@@ -1686,7 +1686,7 @@
           <p>You can't decide</p>
         </div>
         <div class="help-section-card">
-          <p>You've already looked at a ton of cars and you're stressed</p>
+          <p>You have some "maybes" but no "definitely"</p>
         </div>
         <div class="help-section-card">
           <p>You can't trust the salesperson</p>
@@ -1876,6 +1876,20 @@
       // Remove any non-numeric characters
       this.value = this.value.replace(/[^0-9]/g, '');
       updateButtonState();
+    });
+
+    // Add Enter key event listener
+    zipCodeInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && !findCarButton.classList.contains('disabled')) {
+        e.preventDefault();
+        const zipCode = this.value;
+        const baseUrl = 'https://app.findmynextcar.co';
+        window.location.href = `${baseUrl}?zip=${zipCode}`;
+        gtag('event', 'click', {
+          'event_category': 'Button',
+          'event_label': 'Find My Perfect Car'
+        });
+      }
     });
 
     // Track "Find My Perfect Car" button clicks
