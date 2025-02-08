@@ -1854,16 +1854,17 @@
     </div>
   </section>
 
-  <!-- Second Zip Code Section -->
+
+  <!-- Third Zip Code Section -->
   <section class="blue-steele-section" style="background: rgba(78, 47, 154, 0.1); margin-bottom: 0; padding: 80px 0;">
     <div style="max-width: 872px; margin: 0 auto; padding: 0 20px;">
-      <h2>Ready to Find Your Perfect Car?</h2>
-      <p>Enter your zip code below and let's get started on your car buying journey.</p>
+      <h2>Don't Wait Any Longer</h2>
+      <p>Take the first step towards finding your perfect car today.</p>
       <div class="zip-code-section" style="margin-top: 40px; max-width: 300px; margin-left: auto; margin-right: auto;">
         <div style="display: flex; flex-direction: column; gap: 8px;">
-          <input type="text" id="zipCodeInput2" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" 
+          <input type="text" id="zipCodeInput3" placeholder="Enter ZIP Code" maxlength="5" pattern="[0-9]*" 
                  style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; width: 100%; font-size: 16px; margin: 0; box-sizing: border-box; text-align: center;">
-          <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton2" 
+          <a href="https://app.findmynextcar.co" class="blue-steele-button disabled" id="findCarButton3" 
              style="width: 100%; margin: 0; border-radius: 4px; box-sizing: border-box; text-align: center;" onclick="gtag('event', 'click', { 'event_category': 'Button', 'event_label': 'Find My Next Car' });">FIND MY NEXT CAR</a>
         </div>
       </div>
@@ -1969,8 +1970,17 @@
       
       if (isValidZipCode(this.value)) {
         findCarButton3.classList.remove('disabled');
+        findCarButton3.href = `https://app.findmynextcar.co?zip=${this.value}`;
       } else {
         findCarButton3.classList.add('disabled');
+        findCarButton3.href = 'https://app.findmynextcar.co';
+      }
+    });
+
+    // Add click handler for third button
+    findCarButton3.addEventListener('click', function(e) {
+      if (this.classList.contains('disabled')) {
+        e.preventDefault();
       }
     });
   </script>
